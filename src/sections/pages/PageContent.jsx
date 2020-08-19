@@ -11,7 +11,6 @@ import {
 const PageContent = () => {
   const { screen } = useScreenSize();
 
-  const chartColor = "red";
   const height = "315px";
 
   let flexDirection = "column";

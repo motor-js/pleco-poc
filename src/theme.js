@@ -9,6 +9,7 @@ const theme = {
       background: `rgba(1,191,255,0.3)`,
     },
   },
+  // chartColor: "bio",
   navItem: {
     color: { active: "brand", inactive: "#303133" },
   },
