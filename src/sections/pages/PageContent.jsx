@@ -77,7 +77,7 @@ const PageContent = () => {
                     qLabel: "Claim Cost",
                     // width: "5%",
                     qNumType: "M",
-                    qNumFmt: "£#,##0.00",
+                    qNumFmt: "$#,##0.00",
                   },
                 ],
               },
