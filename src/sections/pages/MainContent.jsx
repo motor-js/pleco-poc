@@ -10,7 +10,8 @@ import {
 const MainContent = () => {
   const { screen } = useScreenSize();
 
-  const height = "315px";
+  // const height = "315px";
+  const dynamicWidth = "calc(100% - 10px)";
 
   let flexDirection = "column";
   if (screen === "desktop" || screen === "largeDesktop") flexDirection = "row";
@@ -22,8 +23,6 @@ const MainContent = () => {
     margin: "5px",
     borderRadius: "8px",
   };
-
-  const dynamicWidth = "calc(100% - 10px)";
 
   return (
     <Box padding="10px" width="100%" overflow="scroll" direction="column">
@@ -106,7 +105,8 @@ const MainContent = () => {
       <Box width="100%" flex="grow" wrapProp={true} overflow="visible">
         <Box width={dynamicWidth} {...boxProps} overflow="visible">
           <Column
-            height={height}
+            // height={height}
+            height="425px"
             cols={[
               {
                 qField: "[Claim Notification Date.autoCalendar.Year]",

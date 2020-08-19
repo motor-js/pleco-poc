@@ -10,7 +10,7 @@ import {
   MainContent,
   PageContent,
 } from "./sections";
-import { Grid, Box } from "@motor-js/core";
+import { Grid, Box, SmartHeading } from "@motor-js/core";
 
 const Logo = require("./images/plecologonew.svg");
 
@@ -30,29 +30,11 @@ function App() {
         >
           {/** HEADER */}
           <HeaderContent>
-            {/* <span
-              style={{
-                color: "white",
-                fontWeight: "bold",
-                marginLeft: "45px",
-              }}
-            >
-              Insurance Claims Dashboard
-              <span role="img" aria-label="peace_emoji">
-                ✌️
-              </span>
-            </span> */}
-            <span
-              style={{
-                // color: "white",
-                // fontWeight: "bold",
-                marginLeft: "45px",
-              }}
-            >
+            <SmartHeading type="free" margin="0 0 0 45px">
               <a href="https://plecosystems.com/">
                 <img src={Logo} style={{ width: "100%" }} alt={"logo"} />
               </a>
-            </span>
+            </SmartHeading>
           </HeaderContent>
           {/** MAIN */}
           <Box gridArea="main">
@@ -64,11 +46,7 @@ function App() {
           </Box>
           {/** FOOTER */}
           <FooterContent>
-            <span
-            // style={{
-            //   color: "#F7F7F7",
-            // }}
-            >
+            <SmartHeading type="free" color="brandLight" level={3}>
               made with
               <span
                 role="img"
@@ -78,7 +56,7 @@ function App() {
                 ❤️
               </span>
               by motor
-            </span>
+            </SmartHeading>
           </FooterContent>
         </Grid>
       </div>

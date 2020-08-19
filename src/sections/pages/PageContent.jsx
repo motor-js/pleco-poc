@@ -4,7 +4,8 @@ import { Box, Table, useScreenSize, CurrentSelections } from "@motor-js/core";
 const PageContent = () => {
   const { screen } = useScreenSize();
 
-  const height = "315px";
+  // const height = "315px";
+  // const dynamicWidth = "calc(50% - 10px)";
 
   let flexDirection = "column";
   if (screen === "desktop" || screen === "largeDesktop") {
@@ -17,8 +18,6 @@ const PageContent = () => {
     margin: "5px",
     borderRadius: "8px",
   };
-
-  const dynamicWidth = "calc(50% - 10px)";
 
   return (
     <Box padding="10px" width="100%" overflow="scroll" direction="column">
@@ -35,8 +34,8 @@ const PageContent = () => {
             margin="20px"
             size="small"
             height="100%"
-            tableWidth="100%"
-            wrapperWidth="100%"
+            // tableWidth="100%"
+            // wrapperWidth="100%"
             interactiveSort
             pageHeight={22}
             columns={[
@@ -74,7 +73,7 @@ const PageContent = () => {
                   {
                     qField: "=Sum([Total Claim Cost])",
                     qLabel: "Claim Cost",
-                    width: "5%",
+                    // width: "5%",
                   },
                 ],
               },
