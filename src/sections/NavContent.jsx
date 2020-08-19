@@ -12,8 +12,6 @@ const NavContent = (props) => {
       outerContainerId={"App"}
       // type="scaleRotate"
       type="push"
-      // overlayBackground="rgba(255,0,0,0.3)"
-      openIconColor="brand"
       header={
         <div style={{ color: "#ff6961" }}>
           <a href="http://motor-js.io//">

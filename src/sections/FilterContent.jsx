@@ -13,7 +13,6 @@ const FilterContent = (props) => {
       right
       borderRadius="20px 0px 0px 20px"
       openIcon="filter"
-      openIconColor="brand"
       header={
         <div style={{ fontSize: "20px", color: "#01bfff" }}>
           <FilterIcon size={25} /> Filters

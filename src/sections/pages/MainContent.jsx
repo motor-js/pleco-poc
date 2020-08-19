@@ -4,15 +4,12 @@ import {
   useScreenSize,
   CurrentSelections,
   KPI,
-  Bar,
   Column,
-  Pie,
 } from "@motor-js/core";
 
 const MainContent = () => {
   const { screen } = useScreenSize();
 
-  const chartColor = ["#01bfff", "#F7F7F7", "#67D9FF", "#868e96"];
   const height = "315px";
 
   const KPIBackgroundColor = "#F7F7F7";
@@ -28,7 +25,7 @@ const MainContent = () => {
     borderRadius: "8px",
   };
 
-  const dynamicWidth = "calc(50% - 10px)";
+  const dynamicWidth = "calc(100% - 10px)";
 
   return (
     <Box padding="10px" width="100%" overflow="scroll" direction="column">
@@ -110,7 +107,7 @@ const MainContent = () => {
       </Box>
 
       <Box width="100%" flex="grow" wrapProp={true} overflow="visible">
-        <Box width={"100%"} {...boxProps} overflow="visible">
+        <Box width={dynamicWidth} {...boxProps} overflow="visible">
           <Column
             height={height}
             cols={[
@@ -132,7 +129,7 @@ const MainContent = () => {
             suppressZero={true}
             textOnAxis="xAxis"
             border={false}
-            chartColor={chartColor}
+            // chartColor={chartColor}
           />
         </Box>
       </Box>

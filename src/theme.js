@@ -1,3 +1,5 @@
+const colorTheme = ["#01bfff", "#F7F7F7", "#67D9FF", "#868e96"];
+
 const theme = {
   //Edit your dashboard theme below...
   global: {
@@ -9,7 +11,7 @@ const theme = {
       background: `rgba(1,191,255,0.3)`,
     },
   },
-  // chartColor: "bio",
+  colorTheme,
   navItem: {
     color: { active: "brand", inactive: "#303133" },
   },

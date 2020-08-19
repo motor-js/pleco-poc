@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Table,
-  useScreenSize,
-  CurrentSelections,
-  Line,
-  Column,
-} from "@motor-js/core";
+import { Box, Table, useScreenSize, CurrentSelections } from "@motor-js/core";
 
 const PageContent = () => {
   const { screen } = useScreenSize();
