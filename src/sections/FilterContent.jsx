@@ -1,5 +1,5 @@
 import React from "react";
-import { SidebarNext, Filter, Button } from "@motor-js/core";
+import { SidebarNext, Filter, Button, SmartHeading } from "@motor-js/core";
 import { Filter as FilterIcon } from "@styled-icons/feather";
 
 const Logo = require("../images/logo.png");
@@ -19,20 +19,13 @@ const FilterContent = (props) => {
         </div>
       }
       footer={
-        <div
-          style={{
-            color: "#01bfff",
-            fontSize: "24px",
-          }}
-        >
-          <span>
-            <a href="http://motor-js.io//">
-              <img src={Logo} style={{ width: "10%" }} alt={"logo"} />
-            </a>{" "}
-            Powered by{" "}
-            <img src={Qlik} style={{ width: "10%" }} alt={"Qlik logo"} />
-          </span>
-        </div>
+        <SmartHeading type="free" size={"24px"} color={"brand"} asDate>
+          <a href="http://motor-js.io//">
+            <img src={Logo} style={{ width: "10%" }} alt={"logo"} />
+          </a>
+          &nbsp;Powered by&nbsp;
+          <img src={Qlik} style={{ width: "10%" }} alt={"Qlik logo"} />
+        </SmartHeading>
       }
     >
       <Filter width="100%" label="Claim Status" dimension={["Claim Status"]} />
