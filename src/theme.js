@@ -6,12 +6,13 @@ const theme = {
     fontFamily: `Poppins, -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;`,
     color: {
       brand: "#01bfff",
+      brandLight: "#F7F7F7",
     },
     overlay: {
       background: `rgba(1,191,255,0.3)`,
     },
+    colorTheme,
   },
-  colorTheme,
   navItem: {
     color: { active: "brand", inactive: "#303133" },
   },
@@ -19,7 +20,7 @@ const theme = {
   sidebar: {
     // width: "300px",
     color: {
-      background: "#F7F7F7",
+      background: "brandLight",
       closeIcon: "brand",
       openIcon: "brand",
     },

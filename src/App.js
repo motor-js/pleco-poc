@@ -65,9 +65,9 @@ function App() {
           {/** FOOTER */}
           <FooterContent>
             <span
-              style={{
-                color: "##F7F7F7",
-              }}
+            // style={{
+            //   color: "#F7F7F7",
+            // }}
             >
               made with
               <span

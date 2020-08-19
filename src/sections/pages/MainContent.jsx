@@ -12,13 +12,11 @@ const MainContent = () => {
 
   const height = "315px";
 
-  const KPIBackgroundColor = "#F7F7F7";
-
   let flexDirection = "column";
   if (screen === "desktop" || screen === "largeDesktop") flexDirection = "row";
 
   const boxProps = {
-    backgroundColor: KPIBackgroundColor,
+    backgroundColor: "brandLight",
     border: { color: "brand" },
     elevation: "0 8px 6px -6px #ccc",
     margin: "5px",
@@ -43,8 +41,7 @@ const MainContent = () => {
             label="Claims Opened (YTD)"
             size="small"
             border={false}
-            backgroundColor={KPIBackgroundColor}
-            // border={false}
+            backgroundColor="brandLight"
           />
         </Box>
         <Box flex={true} height="120px" {...boxProps}>
@@ -56,7 +53,7 @@ const MainContent = () => {
             label="Claims Settled (YTD)"
             size="small"
             border={false}
-            backgroundColor={KPIBackgroundColor}
+            backgroundColor="brandLight"
           />
         </Box>
         <Box flex={true} height="120px" {...boxProps}>
@@ -83,7 +80,7 @@ const MainContent = () => {
             label="Claim Payments (YTD)"
             size="small"
             border={false}
-            backgroundColor={KPIBackgroundColor}
+            backgroundColor="brandLight"
           />
         </Box>
         <Box flex={true} height="120px" {...boxProps}>
@@ -101,7 +98,7 @@ const MainContent = () => {
             label="Ave Claim Costs (YTD)"
             size="small"
             border={false}
-            backgroundColor={KPIBackgroundColor}
+            backgroundColor="brandLight"
           />
         </Box>
       </Box>
