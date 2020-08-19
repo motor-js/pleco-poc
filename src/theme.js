@@ -16,6 +16,25 @@ const theme = {
   navItem: {
     color: { active: "brand", inactive: "#303133" },
   },
+  selectionModal: {
+    // buttonType: "icon",
+    hoverBckgColor: {
+      confirm: "#67D9FF",
+      cancel: "rgba(247, 247, 247,0.3)",
+    },
+    bckgColor: {
+      // confirm: "brand",
+      // cancel: "brandLight",
+      confirm: "#01bfff",
+      cancel: "#F7F7F7",
+    },
+    border: {
+      cancel: "solid 1px #01bfff",
+    },
+    color: {
+      cancel: "#01bfff",
+    },
+  },
 
   sidebar: {
     // width: "300px",
