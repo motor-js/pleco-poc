@@ -12,7 +12,7 @@ const NavContent = (props) => {
       outerContainerId={"App"}
       type="scaleRotate"
       header={
-        <div style={{ color: "#ff6961" }}>
+        <div>
           <a href="http://motor-js.io//">
             <img src={Logo} style={{ width: "90%" }} alt={"logo"} />
           </a>

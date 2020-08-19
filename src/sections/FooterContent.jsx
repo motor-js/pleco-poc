@@ -11,7 +11,6 @@ const FooterContent = (props) => {
       justifyContent="center"
       direction="row"
       size="small"
-      color="brandLight"
     >
       {props.children}
     </Box>

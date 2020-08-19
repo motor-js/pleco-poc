@@ -10,7 +10,7 @@ import theme from "./theme";
 ReactDOM.render(
   <React.StrictMode>
     <Motor config={config} theme={theme}>
-      <Login />
+      {/* <Login /> */}
       <App />
     </Motor>
   </React.StrictMode>,
