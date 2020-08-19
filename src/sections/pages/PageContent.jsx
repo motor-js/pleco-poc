@@ -34,6 +34,8 @@ const PageContent = () => {
             margin="20px"
             size="small"
             height="100%"
+            headerAlignment="leftRight"
+            bodyAlignment="leftRight"
             // tableWidth="100%"
             // wrapperWidth="100%"
             interactiveSort
@@ -74,6 +76,8 @@ const PageContent = () => {
                     qField: "=Sum([Total Claim Cost])",
                     qLabel: "Claim Cost",
                     // width: "5%",
+                    qNumType: "M",
+                    qNumFmt: "£#,##0.00",
                   },
                 ],
               },

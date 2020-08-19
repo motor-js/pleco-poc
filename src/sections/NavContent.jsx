@@ -16,7 +16,11 @@ const NavContent = (props) => {
           <a href="http://motor-js.io//">
             <img src={Logo} style={{ width: "90%" }} alt={"logo"} />
           </a>
-          <SmartHeading type="appName" size={"24px"} />
+          <SmartHeading
+            type="appName"
+            size={"24px"}
+            margin={"5px 10px 5px 0px"}
+          />
         </div>
       }
       footer={
