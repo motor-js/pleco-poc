@@ -1,92 +1,88 @@
 import React from "react";
-import { Box, Table, useScreenSize, CurrentSelections } from "@motor-js/core";
+import { Table, CurrentSelections, Grid } from "@motor-js/core";
 
+import Background from "../../images/background1.jpg";
 const PageContent = () => {
-  const { screen } = useScreenSize();
+  // const { screen } = useScreenSize();
 
-  // const height = "315px";
-  // const dynamicWidth = "calc(50% - 10px)";
-
-  let flexDirection = "column";
-  if (screen === "desktop" || screen === "largeDesktop") {
-    flexDirection = "row";
-  }
-
-  const boxProps = {
-    backgroundColor: "white",
-    elevation: "0 8px 6px -6px #ccc",
-    margin: "5px",
-    borderRadius: "8px",
-  };
+  // let flexDirection = "column";
+  // if (screen === "desktop" || screen === "largeDesktop") {
+  //   flexDirection = "row";
+  // }
 
   return (
-    <Box padding="10px" width="100%" overflow="scroll" direction="column">
-      <CurrentSelections minHeight="60px" width="100%" />
-      <Box
-        width="100%"
-        flex="grow"
-        wrapProp={true}
-        overflow="visible"
-        direction={flexDirection}
-      >
-        <Box {...boxProps} overflow="visible">
-          <Table
-            margin="20px"
-            size="small"
-            height="100%"
-            headerAlignment="leftRight"
-            bodyAlignment="leftRight"
-            // tableWidth="100%"
-            // wrapperWidth="100%"
-            interactiveSort
-            pageHeight={22}
-            columns={[
-              {
-                dimensions: [
-                  {
-                    qField: "[Vehicle Type]",
-                    qLabel: "Vehicle Type",
-                    // width: "5%",
-                    // width: "150px",
-                  },
-                  {
-                    qField: "[Claim Settled Date]",
-                    qLabel: "Claim Settled Date",
-                    // width: "5%",
-                  },
-                  {
-                    qField: "[Claim Type]",
-                    qLabel: "Claim Type",
-                    // width: "5%",
-                  },
+    <Grid
+      style={{
+        backgroundImage: `url(${Background})`,
+        backgroundRepeat: "no - repeat",
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+      }}
+      rows={["80px", "auto"]}
+      columns={["repeat(1, 1fr)"]}
+      areas={[["selections"], ["table"]]}
+      // fill
+      // border
+    >
+      <CurrentSelections minHeight="60px" gridArea="selections" />
 
-                  {
-                    qField: "[Claim Sub-Type]",
-                    qLabel: "Claim Sub-Type",
-                    // width: "7.5%",
-                  },
-                  {
-                    qField: "[Claim Status]",
-                    qLabel: "Claim Status",
-                    // width: "5%",
-                  },
-                ],
-                measures: [
-                  {
-                    qField: "=Sum([Total Claim Cost])",
-                    qLabel: "Claim Cost",
-                    // width: "5%",
-                    qNumType: "M",
-                    qNumFmt: "$#,##0.00",
-                  },
-                ],
+      <Table
+        // margin="10px"
+        size="small"
+        // height="100%"
+        // height="600px"
+        headerAlignment="leftRight"
+        bodyAlignment="leftRight"
+        // tableWidth="100%"
+        // wrapperWidth="100%"
+        interactiveSort
+        pageHeight={25}
+        columns={[
+          {
+            dimensions: [
+              {
+                qField: "[Vehicle Type]",
+                qLabel: "Vehicle Type",
+                // width: "5%",
+                // width: "150px",
               },
-            ]}
-            bandedRows
-          />
-        </Box>
-      </Box>
-    </Box>
+              {
+                qField: "[Claim Settled Date]",
+                qLabel: "Claim Settled Date",
+                // width: "5%",
+              },
+              {
+                qField: "[Claim Type]",
+                qLabel: "Claim Type",
+                // width: "5%",
+              },
+
+              {
+                qField: "[Claim Sub-Type]",
+                qLabel: "Claim Sub-Type",
+                // width: "7.5%",
+              },
+              {
+                qField: "[Claim Status]",
+                qLabel: "Claim Status",
+                // width: "5%",
+              },
+            ],
+            measures: [
+              {
+                qField: "=Sum([Total Claim Cost])",
+                qLabel: "Claim Cost",
+                // width: "5%",
+                qNumType: "M",
+                qNumFmt: "$#,##0.00",
+              },
+            ],
+          },
+        ]}
+        bandedRows
+        gridArea="table"
+      />
+    </Grid>
   );
 };
 

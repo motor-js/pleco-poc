@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { config } from "./config_cloud.js";
-import { Motor, Login } from "@motor-js/core";
+import { Motor } from "@motor-js/core";
 import theme from "./theme";
 
 ReactDOM.render(

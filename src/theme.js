@@ -14,6 +14,23 @@ const theme = {
       background: `rgba(1,191,255,0.3)`,
     },
     colorTheme,
+    border: {
+      color: "brand",
+      size: "1px",
+      style: "solid",
+    },
+    chart: {
+      border: {
+        color: "brand",
+        size: "1px",
+        style: "solid",
+      },
+    },
+  },
+  kpi: {
+    wrapper: {
+      backgroundColor: "brandLight",
+    },
   },
   navItem: {
     color: { active: "brand", inactive: "#303133" },
