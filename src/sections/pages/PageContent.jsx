@@ -30,7 +30,7 @@ const PageContent = () => {
         // margin="10px"
         size="small"
         // height="100%"
-        // height="600px"
+        height="590px"
         headerAlignment="leftRight"
         bodyAlignment="leftRight"
         // tableWidth="100%"
