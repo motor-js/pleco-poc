@@ -1,14 +1,11 @@
 import React from "react";
 import { Box, Search } from "@motor-js/core";
-// import { useLocation } from "react-router-dom";
 
 const HeaderContent = (props) => {
-  // let location = useLocation();
-  // console.log(location.pathname);
   return (
     <Box
       gridArea="header"
-      backgroundColor="white"
+      backgroundColor="brandLight"
       border="bottom"
       direction="row"
       align="center"

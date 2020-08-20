@@ -1,6 +1,6 @@
 import React from "react";
 import { SidebarNext, Filter, Button, SmartHeading } from "@motor-js/core";
-import { Filter as FilterIcon } from "@styled-icons/feather";
+import { Filter as FilterIcon } from "@styled-icons/fa-solid";
 
 const Logo = require("../images/logo.png");
 const Qlik = require("../images/Qlik.png");
@@ -19,7 +19,7 @@ const FilterContent = (props) => {
         </div>
       }
       footer={
-        <SmartHeading type="free" size={"24px"} color={"brand"} asDate>
+        <SmartHeading type="free" size={"24px"} color={"brand"}>
           <a href="http://motor-js.io//">
             <img src={Logo} style={{ width: "10%" }} alt={"logo"} />
           </a>

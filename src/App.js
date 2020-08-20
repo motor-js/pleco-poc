@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import Background from "./images/background1.jpg";
+
 import "./App.css";
 import {
   FooterContent,
@@ -22,6 +24,12 @@ function App() {
       <FilterContent />
       <div id="App">
         <Grid
+          style={{
+            backgroundImage: `url(${Background})`,
+            backgroundRepeat: "no - repeat",
+            backgroundAttachment: "fixed",
+            backgroundSize: "cover",
+          }}
           rows={["60px", "auto", "30px"]}
           cols={["auto"]}
           areas={[["header"], ["main"], ["footer"]]}

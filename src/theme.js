@@ -1,5 +1,7 @@
 const colorTheme = ["#01bfff", "#F7F7F7", "#67D9FF", "#868e96"];
 
+// https://plecosystems.com/wp-content/uploads/2019/06/AdobeStock_184811519-uai-2880x1620.jpeg
+
 const theme = {
   //Edit your dashboard theme below...
   global: {
@@ -15,6 +17,12 @@ const theme = {
   },
   navItem: {
     color: { active: "brand", inactive: "#303133" },
+  },
+  spinner: {
+    // type: "ThreeDots",
+    color: "brand",
+    // size: 50,
+    timeout: 5000,
   },
   selectionModal: {
     // buttonType: "icon",

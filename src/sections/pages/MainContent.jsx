@@ -30,10 +30,6 @@ const MainContent = () => {
       <Box width="100%" direction={flexDirection}>
         <Box flex={true} height="120px" {...boxProps}>
           <KPI
-            onClick={() => {
-              window.confirm("You've clicked me!");
-            }}
-            margin="10px"
             cols={[
               "=Sum( { $< [Claim Notification Date.autoCalendar.InYTD]={1} ,[Claim Notification Date.autoCalendar.YearsAgo]={0} > } [ClaimCounter] )",
             ]}
@@ -45,7 +41,6 @@ const MainContent = () => {
         </Box>
         <Box flex={true} height="120px" {...boxProps}>
           <KPI
-            margin="10px"
             cols={[
               "=Sum( { $< [Claim Settled Date.autoCalendar.InYTD]={1} ,[Claim Settled Date.autoCalendar.YearsAgo]={0} > } [ClaimCounter] )",
             ]}
@@ -57,7 +52,6 @@ const MainContent = () => {
         </Box>
         <Box flex={true} height="120px" {...boxProps}>
           <KPI
-            margin="10px"
             cols={[
               {
                 qField:
@@ -65,14 +59,6 @@ const MainContent = () => {
                 qLabel: "Margin Amount",
                 qNumType: "M",
                 qNumFmt: "$#,##0",
-                // qNumFormat: {
-                //   qType: "M",
-                //   qnDec: 0,
-                //   qUseThou: 1,
-                //   qFmt: "$#,##0",
-                //   qDec: ".",
-                //   qThou: ",",
-                // },
               },
             ]}
             roundNum={false}
@@ -84,7 +70,6 @@ const MainContent = () => {
         </Box>
         <Box flex={true} height="120px" {...boxProps}>
           <KPI
-            margin="10px"
             cols={[
               {
                 qField:
