@@ -67,9 +67,10 @@ const PageContent = () => {
               "=Sum( { $< [Claim Notification Date.autoCalendar.InYTD]={1}, [Claim Notification Date.autoCalendar.YearsAgo]={0} > } [Total Claim Cost])/1000000",
             qLabel: "Margin Amount",
             qNumType: "M",
-            qNumFmt: "$#,##0",
+            qNumFmt: "$#,##0.00",
           },
         ]}
+        roundNum={false}
         label="Claims Opened (YTD)"
         size="small"
         gridArea="kpi3"
@@ -83,6 +84,7 @@ const PageContent = () => {
             qNumFmt: "$#,##0",
           },
         ]}
+        roundNum={false}
         label="Claims Opened (YTD)"
         size="small"
         gridArea="kpi4"
