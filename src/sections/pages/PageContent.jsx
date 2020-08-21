@@ -3,13 +3,6 @@ import { Table, CurrentSelections, Grid } from "@motor-js/core";
 
 import Background from "../../images/background1.jpg";
 const PageContent = () => {
-  // const { screen } = useScreenSize();
-
-  // let flexDirection = "column";
-  // if (screen === "desktop" || screen === "largeDesktop") {
-  //   flexDirection = "row";
-  // }
-
   return (
     <Grid
       style={{
@@ -27,14 +20,11 @@ const PageContent = () => {
       <CurrentSelections minHeight="60px" gridArea="selections" />
 
       <Table
-        // margin="10px"
         size="small"
         // height="100%"
         height="590px"
         headerAlignment="leftRight"
         bodyAlignment="leftRight"
-        // tableWidth="100%"
-        // wrapperWidth="100%"
         interactiveSort
         pageHeight={25}
         columns={[
