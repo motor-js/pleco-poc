@@ -5,13 +5,15 @@ import {
   Grid,
   KPI,
   Column,
+  Box,
 } from "@motor-js/core";
 
 const MainContent = () => {
 
   return (
-    <Grid>
-    </Grid>
+    <Box gridArea='main' width='100%'>
+      <CurrentSelections style={{ width: '100%' }} width='100%' />
+    </Box>
   );
 };
 

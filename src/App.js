@@ -9,16 +9,20 @@ import { Grid, Box } from "@motor-js/core";
 
 function App() {
 
+  document.title = "PLECOSYSTEMS";
+
   return (
-    <Grid
-      rows={["60px", "auto", "30px"]}
-      cols={["auto"]}
-      areas={[["header"], ["main"]]}
-      backgroundColor="altGray1"
-    >
-      <HeaderContent />
-      <MainContent />
-    </Grid>
+    <div id='anchor'>
+      <Grid
+        rows={["60px", "auto"]}
+        cols={["auto"]}
+        areas={[["header"], ["main"]]}
+        backgroundColor="white"
+      >
+        <HeaderContent />
+        <MainContent />
+      </Grid>
+    </div>
   );
 }
 

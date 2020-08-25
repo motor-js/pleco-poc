@@ -57,13 +57,9 @@ const theme = {
     color: {
       background: "brandLight",
       closeIcon: "brand",
-      openIcon: "brand",
     },
     border: {
-      color: "brand",
-      radius: "0px 20px 20px 0px",
-      size: "1px",
-      style: "solid",
+      radius: "0px 0px 0px 0px",
     },
   },
 };
