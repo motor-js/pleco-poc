@@ -1,19 +1,43 @@
 import React from "react";
-import { Box, Search } from "@motor-js/core";
+import styled from 'styled-components'
+import { Box, SmartHeading, Sidebar, useSidebar } from "@motor-js/core";
+import { Filter as FilterIcon } from "@styled-icons/fa-solid";
+const Logo = require("../images/plecologonew.svg");
 
-const HeaderContent = (props) => {
+const StyledFilterIcon = styled(FilterIcon)`
+  color: white;
+
+  &:hover {
+    color: #F7F7F7;
+    cursor: pointer;
+  }
+`
+
+const HeaderContent = () => {
+
+  const {isOpen, toggle} = useSidebar();
+
   return (
     <Box
       gridArea="header"
-      backgroundColor="brandLight"
-      border="bottom"
+      backgroundColor="brand"
       direction="row"
       align="center"
-      padding="12px"
-      size="large"
-      overflow="hidden"
+      padding="14px 30px"
+      elevation='0px 0px 9px 3px rgba(41,41,41,.25)'
     >
-      {props.children}
+      <div style={{ marginRight: 'auto' }}>
+        <SmartHeading size='large' color='white' type='appName' margin='0px'/>
+      </div>
+      <a href="https://plecosystems.com/">
+        <img src={Logo} style={{ width: "60%" }} alt={"logo"} />
+      </a>
+      <StyledFilterIcon size={18} onClick={toggle}/> 
+      <Sidebar 
+        isOpen={isOpen}
+      >
+
+      </Sidebar>
     </Box>
   );
 };

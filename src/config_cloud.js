@@ -3,7 +3,7 @@ export const config = {
   secure: true,
   port: null,
   prefix: '',
-  appId: '0c07cd52-e6a1-45ff-a605-fd37394f90bf',
+  appId: 'e6b8cc66-acce-4fd0-9cff-26ea2e987cde',
   qcs: true,
   webIntId: '4Tx-ydWxSQEM_q1ajlYBVzGgVUVJUo-i',
 }
