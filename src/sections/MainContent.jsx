@@ -20,20 +20,38 @@ const MainContent = () => {
   const { screen } = useScreenSize()
 
   //grid area rows
-  const rows =  ["50px","30%", "30%"]
+  const rows =  {
+    mobile: ["50px","repeat(4,1fr)"],
+    tablet: ["50px","repeat(4,1fr)"],
+    desktop: ["50px","30%", "30%"],
+    largeDesktop: ["50px","30%", "30%"]
+  }
 
   //grid area cols
   const cols = {
-    mobile: ["auto"],
-    tablet: ["auto"],
-    desktop: ["auto","auto","auto","auto","auto"],
-    largeDesktop: ["0.2fr", "1fr"]
+    mobile: ["repeat(2,1fr)"],
+    tablet: ["repeat(2,1fr)"],
+    desktop: ["repeat(5,1fr)"],
+    largeDesktop: ["repeat(5,1fr)"],
   }
 
   //grid area
   const areas = {
-    mobile: [["hd"],["mn"]],
-    tablet: [["hd"],["mn"]],
+    mobile: [
+      ["sel","sel"],
+      ["kpi1","kpi2"],
+      ["kpi3","kpi4"],
+      ["bar1","bar1"],
+      ["bar2","bar2",]
+    ],
+    tablet: 
+      [
+        ["sel","sel"],
+        ["kpi1","kpi2"],
+        ["kpi3","kpi4"],
+        ["bar1","bar1"],
+        ["bar2","bar2",]
+      ],
     desktop:
       [
         ["sel","sel","sel","sel","sel"],
@@ -41,20 +59,21 @@ const MainContent = () => {
         ["kpi3","kpi4","bar2","bar2","bar2"]
       ],
     largeDesktop:
-    [["sd","hd"],
-    ["sd", "mn"]],
+    [
+      ["sel","sel","sel","sel","sel"],
+      ["kpi1","kpi2","bar1","bar1","bar1"],
+      ["kpi3","kpi4","bar2","bar2","bar2"]
+    ],
   }
 
 
   return (
     <Box gridArea='main' width='100%'>
       <Grid       
-        rows={rows}
-        columns= {cols.desktop}
-        areas={areas.desktop}
+        rows={rows[screen]}
+        columns= {cols[screen]}
+        areas={areas[screen]}
         fill
-        border
-        gap='10px'
       >
         <Box gridArea='sel'>
           <StyledSelections size='small' width='100%' maxHeight='40px' minHeight='40px'/>
