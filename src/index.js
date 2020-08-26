@@ -6,11 +6,18 @@ import * as serviceWorker from "./serviceWorker";
 import { config } from "./config_cloud.js";
 import { Motor } from "@motor-js/core";
 import theme from "./theme";
+import logo from './images/plecologo_blue.svg'
+import logo1 from './images/logo.png'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Motor config={config} theme={theme}>
-      {/* <Login /> */}
+    <Motor 
+      config={config} 
+      theme={theme} 
+      logo={logo} 
+      logoHeight='40px'
+      logoWidth='220px'
+    >
       <App />
     </Motor>
   </React.StrictMode>,
