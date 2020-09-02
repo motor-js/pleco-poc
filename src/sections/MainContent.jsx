@@ -8,6 +8,7 @@ import {
   Column,
   Box,
   useScreenSize,
+  XYChart
 } from "@motor-js/core";
 
 const StyledSelections = styled(CurrentSelections)`
@@ -18,6 +19,7 @@ const StyledSelections = styled(CurrentSelections)`
 const MainContent = () => {
   const { screen } = useScreenSize();
 
+  console.log(screen)
   //grid area rows
   const rows = {
     mobile: ["50px", "repeat(4,1fr)"],
@@ -31,7 +33,7 @@ const MainContent = () => {
     mobile: ["repeat(2,1fr)"],
     tablet: ["repeat(2,1fr)"],
     desktop: ["repeat(5,1fr)"],
-    largeDesktop: ["repeat(5,1fr)"],
+    largeDesktop: ["0.8fr","0.8fr", "1fr", "1fr", "1fr",],
   };
 
   //grid area
@@ -74,8 +76,8 @@ const MainContent = () => {
           <StyledSelections
             size="small"
             width="100%"
-            maxHeight="40px"
-            minHeight="40px"
+            maxHeight="45px"
+            minHeight="45px"
           />
         </Box>
         {/* <Box gridArea='kpi1' backgroundColor='red'/> */}
@@ -83,26 +85,19 @@ const MainContent = () => {
           margin="10px"
           cols={["=SUM([Forcast Day])"]}
           label="Forecast"
-          size="small"
-          // border={false}
+          size="medium"
           backgroundColor="white"
           gridArea="kpi1"
-          // qNumType="M"
-          // qNumFmt="#,##0"
-          // roundNum={true}
-          // precision={false}
-          // border={false}
+          border={false}
         />
-
         <KPI
           margin="10px"
           cols={["=SUM([Hours])"]}
           label="Hours"
-          size="small"
-          // border={false}
+          size="medium"
           backgroundColor="white"
           gridArea="kpi2"
-          // border={false}
+          border={false}
         />
         <KPI
           margin="10px"
@@ -110,11 +105,10 @@ const MainContent = () => {
             "=Num(COUNT({<[Issue Type]={'Sub-task'}>}[Issue Type]),'#,##0')",
           ]}
           label="Total Subtasks"
-          size="small"
-          // border={false}
+          size="medium"
           backgroundColor="white"
           gridArea="kpi3"
-          // border={false}
+          border={false}
         />
         <KPI
           margin="10px"
@@ -122,14 +116,47 @@ const MainContent = () => {
             "=COUNT({<[Issue Type]={'Sub-task'},[Status]={'Done'}>}[Issue Type])",
           ]}
           label="Completed Subtasks"
-          size="small"
-          // border={false}
+          size="medium"
           backgroundColor="white"
           gridArea="kpi4"
-          // border={false}
+          border={false}
         />
-        <Box gridArea="bar1" backgroundColor="violet" />
-        <Box gridArea="bar2" backgroundColor="orange" />
+        <Column  
+          gridArea="bar1"
+          suppressScroll
+          suppressZero
+          size='small'
+          width='100%'
+          height='180px'
+          colorTheme={['blue']}
+          showLabels='none'
+          textOnAxis='none'
+          showAxis='none'
+          showXAxisText={false}
+          cols={[
+            { qField: 'CanonicalDate', qLabel: 'CanonicalDate' },
+            { qField: '=Sum([Hours])', qLabel: 'Hours' },
+            { qField: '=Sum([Forcast Day])', qLabel: 'Forecast Day' },
+          ]}
+        />
+        <Column  
+          gridArea="bar2"
+          suppressScroll
+          suppressZero
+          size='small'
+          width='100%'
+          height='180px'
+          colorTheme={['blue']}
+          showLabels='none'
+          textOnAxis='none'
+          showAxis='none'
+          showXAxisText={false}
+          cols={[
+            { qField: 'CanonicalDate', qLabel: 'CanonicalDate' },
+            { qField: '=Sum([Hours])', qLabel: 'Hours' },
+            { qField: '=Sum([Forcast Day])', qLabel: 'Forecast Day' }, 
+          ]}
+        />
       </Grid>
     </Box>
   );

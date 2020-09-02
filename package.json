@@ -4,7 +4,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@motor-js/core": "^2.0.6-beta.0",
+    "@motor-js/core": "^2.1.0-beta.0",
     "@styled-icons/fa-solid": "^10.15.1",
     "@styled-icons/ionicons-solid": "^10.6.0",
     "@testing-library/jest-dom": "^4.2.4",

@@ -6,6 +6,11 @@ const theme = {
   //Edit your dashboard theme below...
   global: {
     fontFamily: `Poppins, -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;`,
+    responsiveBreakpoints: {
+      mobile: "400px",
+      tablet: "940px",
+      desktop: "1024px",
+    },
     color: {
       brand: "#01bfff",
       brandLight: "#F7F7F7",
@@ -31,6 +36,18 @@ const theme = {
     wrapper: {
       backgroundColor: "brandLight",
     },
+    size: {
+      medium: {
+        desktop: {
+          label: "16px",
+          value: "55px",
+        },
+        largeDesktop: {
+          label: "16px",
+          value: "55px",
+        },
+      }
+    }
   },
   navItem: {
     color: { active: "brand", inactive: "#303133" },
