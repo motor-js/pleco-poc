@@ -6,6 +6,6 @@ POC mashup for Plecosystems, built using motor js.
 
 ### Get Started via NPM
 
-<code>npm i</code>
+<code>npm i</code> <br />
 <code>npm start</code>
 
