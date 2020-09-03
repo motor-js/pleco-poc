@@ -5,10 +5,8 @@ import {
   CurrentSelections,
   Grid,
   KPI,
-  Column,
   Box,
   useScreenSize,
-  XYChart,
   QlikObject,
 } from "@motor-js/core";
 
@@ -122,14 +120,10 @@ const MainContent = () => {
           border={false}
         />
         <Box gridArea="bar1" padding='20px' width='100%' >
-          <QlikObject
-            id='Acysyk'
-          />
+          <QlikObject id='Acysyk' />
         </Box>
         <Box gridArea="bar2" padding='20px' width='100%'>
-          <QlikObject
-            id='NtQvFrh'
-          />
+          <QlikObject id='NtQvFrh' />
         </Box>
       </Grid>
     </Box>
