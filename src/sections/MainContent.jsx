@@ -19,7 +19,6 @@ const StyledSelections = styled(CurrentSelections)`
 const MainContent = () => {
   const { screen } = useScreenSize();
 
-  console.log(screen)
   //grid area rows
   const rows = {
     mobile: ["50px", "repeat(4,1fr)"],
@@ -128,7 +127,7 @@ const MainContent = () => {
           size='small'
           width='100%'
           height='180px'
-          colorTheme={['blue']}
+          colorTheme={['#00bfff', '#0040ff']}
           showLabels='none'
           textOnAxis='none'
           showAxis='none'
@@ -146,15 +145,15 @@ const MainContent = () => {
           size='small'
           width='100%'
           height='180px'
-          colorTheme={['blue']}
+          colorTheme={['#00bfff', '#0040ff']}
           showLabels='none'
           textOnAxis='none'
           showAxis='none'
           showXAxisText={false}
           cols={[
             { qField: 'CanonicalDate', qLabel: 'CanonicalDate' },
-            { qField: '=Sum([Hours])', qLabel: 'Hours' },
-            { qField: '=Sum([Forcast Day])', qLabel: 'Forecast Day' }, 
+            { qField: "=COUNT({<[DateType]={'Resolved'},[Issue Type]={'Sub-task'}>}[Issue Type])", qLabel: 'Total Subtasks' },
+            { qField: "=COUNT({<[DateType]={'Resolved'},[Issue Type]={'Sub-task'},[Status]={'Done'}>}[Issue Type])", qLabel: 'Completed Subtasks' },
           ]}
         />
       </Grid>
