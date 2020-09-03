@@ -8,7 +8,8 @@ import {
   Column,
   Box,
   useScreenSize,
-  XYChart
+  XYChart,
+  QlikObject,
 } from "@motor-js/core";
 
 const StyledSelections = styled(CurrentSelections)`
@@ -120,6 +121,26 @@ const MainContent = () => {
           gridArea="kpi4"
           border={false}
         />
+        <Box gridArea="bar1" padding='20px' width='100%' >
+          <QlikObject
+            id='Acysyk'
+          />
+        </Box>
+        <Box gridArea="bar2" padding='20px' width='100%'>
+          <QlikObject
+            id='NtQvFrh'
+          />
+        </Box>
+      </Grid>
+    </Box>
+  );
+};
+
+export default MainContent;
+
+
+
+        {/*
         <Column  
           gridArea="bar1"
           suppressScroll
@@ -156,9 +177,4 @@ const MainContent = () => {
             { qField: "=COUNT({<[DateType]={'Resolved'},[Issue Type]={'Sub-task'},[Status]={'Done'}>}[Issue Type])", qLabel: 'Completed Subtasks' },
           ]}
         />
-      </Grid>
-    </Box>
-  );
-};
-
-export default MainContent;
+        */}
